@@ -53,5 +53,19 @@ const proxyUser = new Proxy(user, {
   },
 });
 
-let usr = proxyUser.name;
-console.log(usr);
+// let usr = proxyUser.name;
+// console.log(usr);
+
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+  bark() {
+    console.log(`${this.name} is barking`);
+  }
+}
+
+const dog1 = new Dog('can');
+const dog2 = new Dog('mert');
+
+console.log(Dog.prototype === dog1.__proto__);
